@@ -1,5 +1,29 @@
 {
   "required_documents": [],
   "aliases": {},
-  "ignore_orphan_documents": []
+  "ignore_orphan_documents": [],
+  "orphan_exempt_document_types": [
+    "Biblioteca",
+    "Catálogo",
+    "Fluxo",
+    "Prompt",
+    "Template",
+    "Artefato de produção"
+  ],
+  "orphan_exempt_categories": [],
+  "orphan_exempt_paths": [
+    "TCCN AI Studio Docs/Bibliotecas",
+    "TCCN AI Studio Docs/Fluxos",
+    "TCCN AI Studio Docs/Prompts",
+    "TCCN AI Studio Docs/Demandas",
+    "TCCN AI Studio Docs/Universos"
+  ],
+  "metadata_exempt_document_types": [
+    "Artefato de produção"
+  ],
+  "metadata_exempt_categories": [],
+  "metadata_exempt_paths": [
+    "TCCN AI Studio Docs/Demandas",
+    "TCCN AI Studio Docs/Universos"
+  ]
 }
