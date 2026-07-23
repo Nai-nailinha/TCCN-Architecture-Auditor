@@ -8,6 +8,9 @@ from .parser import discover_documents
 from .report import save_markdown_report
 
 
+DEFAULT_CONFIG_PATH = Path("audit-config.json")
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Auditor da arquitetura documental do TCCN AI Studio."
@@ -23,7 +26,10 @@ def build_parser() -> argparse.ArgumentParser:
         "--config",
         type=Path,
         default=None,
-        help="Arquivo JSON de configuração.",
+        help=(
+            "Arquivo JSON de configuração. "
+            "Quando omitido, usa audit-config.json da pasta atual, se existir."
+        ),
     )
 
     parser.add_argument(
@@ -40,6 +46,22 @@ def build_parser() -> argparse.ArgumentParser:
     )
 
     return parser
+
+
+def resolve_config_path(config_path: Path | None) -> Path | None:
+    """
+    Usa o arquivo informado por --config.
+
+    Quando o argumento não é fornecido, procura audit-config.json
+    na pasta atual. Se ele não existir, mantém a configuração padrão.
+    """
+    if config_path is not None:
+        return config_path
+
+    if DEFAULT_CONFIG_PATH.exists():
+        return DEFAULT_CONFIG_PATH
+
+    return None
 
 
 def main() -> int:
@@ -61,7 +83,8 @@ def main() -> int:
         return 1
 
     try:
-        config = load_config(args.config)
+        config_path = resolve_config_path(args.config)
+        config = load_config(config_path)
 
         documents, untitled_files = discover_documents(
             args.documents_folder,
@@ -90,6 +113,13 @@ def main() -> int:
     print(f"Documentos encontrados: {len(result.documents)}")
     print(f"Erros: {result.error_count}")
     print(f"Avisos: {result.warning_count}")
+    print(f"Informações: {result.information_count}")
+
+    if config_path is not None:
+        print(f"Configuração usada: {config_path}")
+    else:
+        print("Configuração usada: padrão interno")
+
     print(f"Relatório salvo em: {args.output}")
 
     return 0 if result.error_count == 0 else 2

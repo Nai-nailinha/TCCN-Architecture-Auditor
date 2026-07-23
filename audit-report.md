@@ -5,6 +5,7 @@
 - Documentos encontrados: 36
 - Erros encontrados: 0
 - Avisos encontrados: 48
+- Informações: 0
 
 ## Arquivos sem título
 
@@ -18,7 +19,7 @@ Nenhum título duplicado encontrado.
 
 Nenhuma referência quebrada encontrada.
 
-## Documentos órfãos
+## Documentos órfãos que exigem revisão
 
 - Biblioteca de Estratégias de Conteúdo do TCCN AI Studio
 - Biblioteca de Padrões Visuais do TCCN AI Studio
@@ -56,6 +57,10 @@ Nenhuma referência quebrada encontrada.
 - Sistema de Prompts do TCCN AI Studio
 - Bíblia do Universo TCCN
 - 📄 Especificação de Universo v0.1
+
+## Documentos não referenciados permitidos
+
+Nenhum documento foi dispensado pela política semântica.
 
 ## Dependências circulares
 
