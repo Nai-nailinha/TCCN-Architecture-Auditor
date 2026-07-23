@@ -1,49 +1,61 @@
-# TCCN AI Studio Docs
+# TCCN AI Studio
 
-## Objetivo
+O TCCN AI Studio é um sistema modular de produção de conteúdo baseado em Inteligência Artificial, organizado por documentação oficial versionada.
 
-Esta pasta contém toda a documentação oficial do TCCN AI Studio.
-
-Os documentos aqui armazenados constituem a fonte oficial de conhecimento do estúdio.
-
-Nenhuma conversa do ChatGPT deve ser considerada fonte oficial após a migração.
+Toda a arquitetura do projeto é mantida neste repositório e serve como fonte única de verdade para a evolução do estúdio.
 
 ---
 
-## Organização
+# Estrutura da Documentação
 
-- Fundação
-- Governança
-- Especialistas
-- Bibliotecas
-- Fluxos
-- Universo TCCN
+```
+TCCN AI Studio/
+│
+├── README.md
+├── Governança/
+├── Núcleo/
+├── Operação/
+├── Especialistas/
+├── Fluxos/
+├── Bibliotecas/
+├── Templates/
+└── Universo TCCN/
+```
 
----
+## Descrição das Pastas
 
-## Regras
-
-- Apenas documentos aprovados fazem parte desta pasta.
-- Alterações devem substituir a versão oficial.
-- Documentos arquivados não devem ser utilizados como referência operacional.
-- Todos os documentos devem seguir o padrão de metadados.
-
----
-
-## Metadados
-
-Todo documento oficial deve iniciar com:
-
-Versão:
-Status:
-Categoria:
-Tipo de documento:
-Fonte oficial:
-Documentos superiores:
-Documentos relacionados:
+| Pasta | Finalidade |
+|--------|------------|
+| **Governança** | Documentos responsáveis pelas regras, organização e evolução do AI Studio. |
+| **Núcleo** | Fundamentos permanentes da arquitetura, identidade e princípios do estúdio. |
+| **Operação** | Modelo operacional e regras de funcionamento do AI Studio. |
+| **Especialistas** | Definição oficial dos especialistas, responsabilidades e colaboração. |
+| **Fluxos** | Fluxos de produção específicos para cada tipo de conteúdo. |
+| **Bibliotecas** | Conhecimento reutilizável, memória permanente e bases de apoio. |
+| **Templates** | Modelos reutilizáveis de documentos, estruturas e padrões. |
+| **Universo TCCN** | Identidade do universo Ti com Café e Neurônios, personagens, direção de arte e elementos próprios da marca. |
 
 ---
 
-## Auditoria
+# Regras da Estrutura
 
-Esta documentação pode ser validada utilizando o TCCN Architecture Auditor.
+A estrutura acima é a organização oficial da documentação do TCCN AI Studio.
+
+- Todos os documentos oficiais devem ser armazenados em uma das categorias existentes.
+- Não devem ser criadas novas pastas ou categorias sem revisão e aprovação arquitetural.
+- Caso um documento não se encaixe em nenhuma categoria existente, a necessidade de alteração da estrutura deverá ser analisada antes da criação de uma nova pasta.
+- Toda alteração na estrutura da documentação deve ser registrada e versionada neste repositório.
+
+---
+
+# Organização dos Documentos
+
+Todo documento oficial deverá informar, no início do arquivo:
+
+- Nome do documento
+- Versão
+- Status
+- Pasta de destino
+- Nome do arquivo
+
+Esse padrão garante consistência e facilita a manutenção da documentação ao longo da evolução do AI Studio.
